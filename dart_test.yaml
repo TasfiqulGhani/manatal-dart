@@ -1,0 +1,3 @@
+paths:
+  - test/manatal_test.dart
+  - test/models_test.dart
