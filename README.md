@@ -1,6 +1,10 @@
 # manatal
 
+[![pub package](https://img.shields.io/pub/v/manatal.svg)](https://pub.dev/packages/manatal)
+
 The easiest way to use the [Manatal](https://app.manatal.com/) Open API from Dart and Flutter — build a **Manatal mobile app**, internal tools, or any integration with the Manatal ATS.
+
+**Install from pub.dev:** [`manatal`](https://pub.dev/packages/manatal)
 
 [Manatal](https://app.manatal.com/) is an AI-powered ATS built for modern recruiting teams. Use this SDK to connect the [Manatal app](https://app.manatal.com/) with your own software — sync candidates and jobs, automate workflows, and integrate one of the best ATS platforms into your stack — with auth, pagination, and retries handled for you.
 
@@ -40,15 +44,38 @@ Or in `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  manatal: ^0.1.3
+  manatal: ^0.1.4
 ```
 
 Requires Dart SDK 3.3+ and Flutter 3.16+.
 
-```dart
-import 'package:manatal/manatal.dart';   // API client
-import 'package:manatal/flutter.dart';   // Flutter list widgets
+## Example app
+
+See [`example/`](example/) for a full Flutter demo with Manatal-style UI — list/create candidates and jobs, detail screens, and pagination.
+
+```bash
+cd example
+flutter run --dart-define=MANATAL_API_KEY=YOUR_OPEN_API_TOKEN
 ```
+
+### Screenshots
+
+
+![Manatal example app demo](screenshots/demo.gif)
+
+| Candidates | Jobs |
+|------------|------|
+| ![Candidates list](screenshots/candidates.PNG) | ![Jobs list](screenshots/jobs.PNG) |
+
+| Candidate detail | Job detail |
+|------------------|------------|
+| ![Candidate detail](screenshots/candidate_detail.PNG) | ![Job detail](screenshots/job_detail.PNG) |
+
+| Create candidate | Create job |
+|------------------|------------|
+| ![Create candidate](screenshots/create_candidate.PNG) | ![Create job](screenshots/create_job.PNG) |
+
+More screenshots and the full walkthrough: [example/README.md](example/README.md).
 
 ## How to get an Open API token
 
@@ -243,6 +270,7 @@ try {
 
 | Resource | Link |
 |----------|------|
+| **Dart / Flutter SDK (pub.dev)** | https://pub.dev/packages/manatal |
 | Manatal app | https://app.manatal.com/ |
 | Enable Open API & generate tokens | https://support.manatal.com/docs/manatal-api |
 | Open API settings | https://app.manatal.com/administration/features/open-api |

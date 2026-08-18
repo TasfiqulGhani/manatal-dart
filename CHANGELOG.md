@@ -1,3 +1,8 @@
+## 0.1.4
+
+- Add pub.dev screenshots gallery and README images (GIF + PNGs).
+- Fix pub.dev `topics` (max 5).
+
 ## 0.1.3
 
 - Merge Flutter widgets into this package — one dependency for API client and UI lists.

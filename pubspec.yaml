@@ -2,7 +2,7 @@ name: manatal
 description: >-
   Dart & Flutter SDK for the Manatal ATS Open API. Build a Manatal mobile app
   with API client, paginated list widgets, auth, and retries in one package.
-version: 0.1.3
+version: 0.1.4
 homepage: https://github.com/TasfiqulGhani/manatal-dart
 repository: https://github.com/TasfiqulGhani/manatal-dart
 issue_tracker: https://github.com/TasfiqulGhani/manatal-dart/issues
@@ -25,13 +25,27 @@ dev_dependencies:
 
 topics:
   - manatal
-  - manatal-app
   - ats
   - api
   - flutter
-  - flutter-app
-  - mobile
-  - mobile-app
-  - widgets
   - recruiting
-  - hr
+
+screenshots:
+  - description: 'Animated demo of the Manatal Flutter example app walkthrough.'
+    path: screenshots/demo.gif
+  - description: 'Example app dashboard with candidates and jobs overview.'
+    path: screenshots/home.PNG
+  - description: 'Paginated candidates list powered by ManatalCandidateList.'
+    path: screenshots/candidates.PNG
+  - description: 'Candidate detail screen loaded from the Manatal Open API.'
+    path: screenshots/candidate_detail.PNG
+  - description: 'Paginated jobs list powered by ManatalJobList.'
+    path: screenshots/jobs.PNG
+  - description: 'Job detail screen with organization and position info.'
+    path: screenshots/job_detail.PNG
+  - description: 'Create candidate form in the example Manatal mobile app.'
+    path: screenshots/create_candidate.PNG
+  - description: 'Create candidate form filled with sample candidate data.'
+    path: screenshots/create_candidate_form_filled.PNG
+  - description: 'Create job form in the example Manatal Flutter app.'
+    path: screenshots/create_job.PNG

@@ -1,0 +1,5 @@
+# Publish SDK only — example app and media stay on GitHub.
+example/
+manatal_flutter/
+build/
+.dart_tool/

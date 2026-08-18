@@ -2,6 +2,9 @@
 .dart_tool/
 .packages
 build/
+example/.dart_tool/
+example/build/
+example/pubspec.lock
 pubspec.lock
 *.iml
 .idea/

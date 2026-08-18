@@ -1,0 +1,25 @@
+name: manatal_example
+description: Example Flutter app for the Manatal Open API SDK.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.3.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10
+  manatal:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/manatal-logo.svg
