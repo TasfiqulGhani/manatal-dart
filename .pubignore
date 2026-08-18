@@ -1,5 +1,15 @@
-# Publish SDK only — example app and media stay on GitHub.
-example/
+# Keep example/ in the pub tarball (required for pub points), but omit heavy app files.
+example/ios/
+example/android/
+example/macos/
+example/linux/
+example/windows/
+example/web/
+example/screenshots/
+example/.dart_tool/
+example/build/
+example/pubspec.lock
+
 manatal_flutter/
 build/
 .dart_tool/

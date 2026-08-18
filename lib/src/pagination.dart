@@ -3,7 +3,9 @@ library;
 
 import 'models.dart';
 
+/// One page of results from a paginated Open API list endpoint.
 class Page {
+  /// Creates a page with [count], [results], and optional [next]/[previous] URLs.
   Page({
     required this.count,
     required this.results,
@@ -11,6 +13,7 @@ class Page {
     this.previous,
   });
 
+  /// Parses a DRF-style paginated JSON response.
   factory Page.fromJson(Map<String, dynamic> json) {
     return Page(
       count: (json['count'] as num?)?.toInt() ?? 0,
@@ -22,9 +25,16 @@ class Page {
     );
   }
 
+  /// Total number of matching records across all pages.
   final int count;
+
+  /// URL of the next page, if any.
   final String? next;
+
+  /// URL of the previous page, if any.
   final String? previous;
+
+  /// Records returned for this page.
   final List<dynamic> results;
 }
 

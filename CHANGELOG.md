@@ -1,3 +1,9 @@
+## 0.1.5
+
+- Include `example/` in pub publish tarball for pub.dev points.
+- Add dartdoc comments on public API (client, widgets, pagination).
+- Format library sources for static analysis score.
+
 ## 0.1.4
 
 - Add pub.dev screenshots gallery and README images (GIF + PNGs).

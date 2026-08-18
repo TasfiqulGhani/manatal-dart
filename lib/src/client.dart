@@ -13,6 +13,7 @@ import 'resources/resources.dart';
 /// }
 /// ```
 class ManatalClient {
+  /// Creates a client with [apiKey], or reads `MANATAL_API_KEY` when omitted.
   ManatalClient({
     String? apiKey,
     int maxRetries = 3,
@@ -48,18 +49,43 @@ class ManatalClient {
 
   late final HttpTransport _transport;
 
+  /// Candidate CRUD and nested candidate resources.
   late final CandidatesResource candidates;
+
+  /// Job CRUD and nested job resources.
   late final JobsResource jobs;
+
+  /// Organization CRUD.
   late final OrganizationsResource organizations;
+
+  /// Match CRUD between candidates and jobs.
   late final MatchesResource matches;
+
+  /// Contact CRUD.
   late final ContactsResource contacts;
+
+  /// Read-only user listing.
   late final UsersResource users;
+
+  /// Read-only currency lookup.
   late final CurrenciesResource currencies;
+
+  /// Read-only language lookup.
   late final LanguagesResource languages;
+
+  /// Read-only nationality lookup.
   late final NationalitiesResource nationalities;
+
+  /// Read-only industry lookup.
   late final IndustriesResource industries;
+
+  /// Read-only job pipeline lookup.
   late final JobPipelinesResource jobPipelines;
+
+  /// Read-only match stage lookup.
   late final MatchStagesResource matchStages;
+
+  /// Skill CRUD and lookup.
   late final SkillsResource skills;
 
   /// Send a raw request against the Open API.
@@ -79,5 +105,6 @@ class ManatalClient {
     );
   }
 
+  /// Releases the underlying HTTP client.
   void close() => _transport.close();
 }

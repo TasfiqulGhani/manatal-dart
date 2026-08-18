@@ -44,7 +44,7 @@ Or in `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  manatal: ^0.1.4
+  manatal: ^0.1.5
 ```
 
 Requires Dart SDK 3.3+ and Flutter 3.16+.

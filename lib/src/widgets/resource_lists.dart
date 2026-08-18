@@ -11,6 +11,7 @@ String _readField(dynamic item, String key) {
 
 /// Paginated list of candidates from the Manatal Open API.
 class ManatalCandidateList extends StatelessWidget {
+  /// Creates a candidate list backed by [client].
   const ManatalCandidateList({
     super.key,
     required this.client,
@@ -27,13 +28,20 @@ class ManatalCandidateList extends StatelessWidget {
     this.physics,
   });
 
+  /// Manatal client used to load candidate pages.
   final ManatalClient client;
   final ManatalItemBuilder? itemBuilder;
   final int pageSize;
+
+  /// Optional query parameters sent to the candidates list endpoint.
   final Map<String, String>? filters;
   final ManatalPaginationMode mode;
   final EdgeInsetsGeometry? padding;
+
+  /// Widget shown when the list has no results.
   final Widget Function(BuildContext context)? emptyBuilder;
+
+  /// Widget shown when loading a page fails.
   final Widget Function(BuildContext context, Object error)? errorBuilder;
   final Widget Function(BuildContext context)? loadingBuilder;
   final Widget Function(

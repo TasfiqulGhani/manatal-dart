@@ -65,7 +65,8 @@ class JobsResource extends Resource {
 }
 
 class OrganizationsResource extends Resource {
-  OrganizationsResource(ManatalClient client) : super(client, '/organizations/');
+  OrganizationsResource(ManatalClient client)
+      : super(client, '/organizations/');
 
   NestedResource activities(Object organizationId) =>
       NestedResource(client, path, organizationId, 'activities');
@@ -116,7 +117,8 @@ class LanguagesResource extends ReadOnlyResource {
 }
 
 class NationalitiesResource extends ReadOnlyResource {
-  NationalitiesResource(ManatalClient client) : super(client, '/nationalities/');
+  NationalitiesResource(ManatalClient client)
+      : super(client, '/nationalities/');
 }
 
 class IndustriesResource extends ReadOnlyResource {
@@ -134,8 +136,7 @@ class MatchStagesResource extends ReadOnlyResource {
 class SkillsResource extends Resource {
   SkillsResource(ManatalClient client) : super(client, '/skills/');
 
-  Future<dynamic> createNames(List<String> names) =>
-      create({'names': names});
+  Future<dynamic> createNames(List<String> names) => create({'names': names});
 
   @override
   Future<dynamic> retrieve(Object id) {

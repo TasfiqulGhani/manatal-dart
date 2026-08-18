@@ -64,7 +64,8 @@ class NestedResource {
     String parentPath,
     PathId parentId,
     String nested,
-  ) : _base = '${parentPath.endsWith('/') ? parentPath : '$parentPath/'}$parentId/${nested.replaceAll(RegExp(r'^/|/$'), '')}/';
+  ) : _base =
+            '${parentPath.endsWith('/') ? parentPath : '$parentPath/'}$parentId/${nested.replaceAll(RegExp(r'^/|/$'), '')}/';
 
   final ManatalClient client;
   final String _base;

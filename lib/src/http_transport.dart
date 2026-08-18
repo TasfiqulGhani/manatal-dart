@@ -125,7 +125,8 @@ class HttpTransport {
         if (attempt > maxRetries) {
           raiseForStatus(response, retryAfter: wait);
         }
-        await Future<void>.delayed(Duration(milliseconds: (wait * 1000).round()));
+        await Future<void>.delayed(
+            Duration(milliseconds: (wait * 1000).round()));
         continue;
       }
 
@@ -177,7 +178,8 @@ class HttpTransport {
   bool _shouldRetry(String method, int status, int attempt) {
     if (attempt >= maxRetries) return false;
     if (status == 429) return true;
-    if (_transientStatus.contains(status) && _idempotentMethods.contains(method)) {
+    if (_transientStatus.contains(status) &&
+        _idempotentMethods.contains(method)) {
       return true;
     }
     return false;

@@ -28,6 +28,7 @@ enum ManatalPaginationMode {
 
 /// Paginated list widget backed by the Manatal Open API.
 class ManatalPaginatedList extends StatefulWidget {
+  /// Creates a generic paginated list using [loadPage] and [itemBuilder].
   const ManatalPaginatedList({
     super.key,
     required this.client,
@@ -46,8 +47,13 @@ class ManatalPaginatedList extends StatefulWidget {
     this.physics,
   });
 
+  /// Manatal client passed to [loadPage].
   final ManatalClient client;
+
+  /// Loads one page of API results.
   final ManatalPageLoader loadPage;
+
+  /// Builds one row for an item on the current page.
   final ManatalItemBuilder itemBuilder;
   final int pageSize;
   final Map<String, String>? filters;
